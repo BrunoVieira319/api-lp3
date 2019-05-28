@@ -1,3 +1,3 @@
 # api-lp3
 
-<h3>sudo docker-compose up</h3>
+<code>sudo docker-compose up</code> xD
