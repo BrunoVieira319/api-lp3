@@ -6,10 +6,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class InfoService {
 
+    private WeatherService weatherService;
+    private ZenService zenService;
+
+    public InfoService() {
+        this.weatherService = new WeatherService();
+        this.zenService = new ZenService();
+    }
+
     public InfoDto getInfo() {
 
         InfoDto infoDto = new InfoDto();
-        infoDto.setWeather(new WeatherService().getWeather());
+        infoDto.setWeather(weatherService.getWeather());
+        infoDto.setZen(zenService.getZen());
 
         return infoDto;
     }
