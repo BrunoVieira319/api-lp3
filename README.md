@@ -1,3 +1,3 @@
 # api-lp3
-
-<code>sudo docker-compose up</code> xD
+<code>./gradlew build</code>
+<code>sudo docker-compose up</code>
