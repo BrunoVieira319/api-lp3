@@ -1,7 +1,7 @@
 version: '3'
 services:
-  springboot:
-    image: my-api:1
+  api:
+    image: gradle
     build:
       context: ./
       dockerfile: Dockerfile
