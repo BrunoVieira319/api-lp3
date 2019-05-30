@@ -5,10 +5,12 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.nio.charset.StandardCharsets;
 
+@Service
 public class SecretService {
 
     private RestTemplate restTemplate;
@@ -17,8 +19,8 @@ public class SecretService {
 
     public SecretService() {
         this.restTemplate = new RestTemplate();
-        this.username = "";
-        this.password = "";
+        this.username = "bruno";
+        this.password = "kkjhdf#k%j*lkj";
     }
 
     public Secret getSecret() {
@@ -27,7 +29,7 @@ public class SecretService {
 
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        ResponseEntity<Secret> secret = restTemplate.exchange("https://lp3-secret.herokuapp.com/", HttpMethod.POST, entity, Secret.class);
+        ResponseEntity<Secret> secret = restTemplate.exchange("https://lp3-secret.herokuapp.com/secreto", HttpMethod.POST, entity, Secret.class);
 
         return secret.getBody();
     }

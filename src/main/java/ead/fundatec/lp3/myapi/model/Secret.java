@@ -2,17 +2,20 @@ package ead.fundatec.lp3.myapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Secret {
 
-    private String usuario;
-    private String dado_secreto;
+    private List<Color> colors;
 
-    public String getUsuario() {
-        return usuario;
+    public Secret() {
+        colors = new ArrayList<>();
     }
 
-    public String getDado_secreto() {
-        return dado_secreto;
+    public List<Color> getColors() {
+        return Collections.unmodifiableList(colors);
     }
 }

@@ -1,6 +1,7 @@
 package ead.fundatec.lp3.myapi.service;
 
 import ead.fundatec.lp3.myapi.dto.InfoDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,10 +11,11 @@ public class InfoService {
     private ZenService zenService;
     private SecretService secretService;
 
-    public InfoService() {
-        this.weatherService = new WeatherService();
-        this.zenService = new ZenService();
-        this.secretService = new SecretService();
+    @Autowired
+    public InfoService(WeatherService weatherService, ZenService zenService, SecretService secretService) {
+        this.weatherService = weatherService;
+        this.zenService = zenService;
+        this.secretService = secretService;
     }
 
     public InfoDto getInfo() {

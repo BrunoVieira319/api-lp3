@@ -2,6 +2,7 @@ package ead.fundatec.lp3.myapi.controller;
 
 import ead.fundatec.lp3.myapi.dto.InfoDto;
 import ead.fundatec.lp3.myapi.service.InfoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,11 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 public class MyApiController {
 
+    @Autowired
     private InfoService infoService;
-
-    public MyApiController() {
-        this.infoService = new InfoService();
-    }
 
     @PostMapping(value = "/info")
     public ResponseEntity<InfoDto> getInfo() {
