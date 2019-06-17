@@ -20,3 +20,7 @@ dependencies {
     compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.1'
 }
 
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
+}
