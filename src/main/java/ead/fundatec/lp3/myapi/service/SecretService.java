@@ -27,6 +27,8 @@ public class SecretService {
         HttpHeaders headers = new HttpHeaders();
         headers.setBasicAuth(username, password, StandardCharsets.UTF_8);
 
+
+
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         ResponseEntity<Secret> secret = restTemplate.exchange("https://lp3-secret.herokuapp.com/secreto", HttpMethod.POST, entity, Secret.class);
