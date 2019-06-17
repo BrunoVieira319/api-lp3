@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/BrunoVieira319/api-lp3.svg?branch=master)](https://travis-ci.com/BrunoVieira319/api-lp3)
 # Trabalho Final LP3
 With Gradle: <code>./gradlew build && ./gradlew bootRun</code> <br/>
 With Docker: <code>sudo docker-compose up</code> <br/>
